@@ -1,31 +1,15 @@
-# a = 5
-# b = 10
-#
-# if a > b:
-#     print("A больше B")
-#     print(a - b)
-# else:
-#     print("B больше или равно A")
-#     print(b - a)
-#
-# print("The End")
+import random
+a = True
+b = False
 
+c = random.randint(1, 100)
+d = random.choice(['ABC', 'DEF'])
 
-test = "Hello"
-test2 = "Eugene"
+if c < 50:
+    a = True
+if c > 50 and c < 100:
+    a = False
 
-test3 = test + " " + test2
-test4 = test3 + "1"
-
-if test3 == test + " " + test2 + " ":
-    print(test3)
-else:
-    print("NONO")
-    print(test3)
-    print(5+5)
-    print(id(test3))
-    print(id(test4))
-    print("test")
-    print("test")
-    print("ABC")
-
+print(c)
+print(a)
+print(d)
