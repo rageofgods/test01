@@ -26,4 +26,5 @@ else:
     print(id(test3))
     print(id(test4))
     print("test")
+    print("test")
 
