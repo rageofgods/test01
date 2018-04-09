@@ -1,15 +1,24 @@
-import random
-a = True
-b = False
+from netmiko import ConnectHandler
+from datetime import datetime
+import re
 
-c = random.randint(1, 100)
-d = random.choice(['ABC', 'DEF'])
+switch = {
+     'device_type': 'cisco_ios',
+     'ip':   '10.134.217.33',
+     'username': 'prime',
+     'password': 'Dnekrf55',
+     'verbose': False,
+}
 
-if c < 50:
-    a = True
-if c > 50 and c < 100:
-    a = False
+start_time = datetime.now()
 
-print(c)
-print(a)
-print(d)
+net_connect = ConnectHandler(**switch)
+output = net_connect.send_command("show version")
+
+line = re.findall(r'Power supply serial number', output)[0:2]
+
+print(line)
+
+end_time = datetime.now()
+total_time = end_time - start_time
+print(total_time)
