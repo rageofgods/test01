@@ -6,7 +6,7 @@ switch = {
      'device_type': 'cisco_ios',
      'ip':   '10.134.217.33',
      'username': 'prime',
-     'password': 'Dnekrf55',
+     'password': 'XXXXX',
      'verbose': False,
 }
 
